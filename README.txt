@@ -32,11 +32,3 @@ PyTorch: 2.8.0+cpu
 NumPy: 1.26.0
 Matplotlib: 3.8.0
 Pillow: 8.4.0
-
-echo "# MachineLearning_Ai" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/NebojsaMrkaic/MachineLearning_Ai.git
-git push -u origin main
