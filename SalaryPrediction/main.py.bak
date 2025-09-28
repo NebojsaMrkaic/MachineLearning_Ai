@@ -1,0 +1,96 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+import tensorflow as tf
+from tensorflow.keras.models import load_model
+from tensorflow.keras import regularizers
+
+# 1. Load CSV
+df = pd.read_csv("Salary_Data.csv")
+df = df.dropna()  # remove NaNs if any
+print("First 5 rows:")
+print(df.head())
+
+# 2. Prepare data
+X = df[['Years of Experience']].values
+y = df['Salary'].values
+
+# 3. Scale input features
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# 4. Split data
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+
+# 5. Build and train model
+optimizer = tf.keras.optimizers.Adam(learning_rate=0.001, clipnorm=1.0)
+
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(64, activation='relu', input_shape=(1,),
+                          kernel_regularizer=regularizers.l2(0.01)),
+    tf.keras.layers.Dense(64, activation='relu',
+                          kernel_regularizer=regularizers.l2(0.01)),
+    tf.keras.layers.Dense(1)
+])
+
+model.compile(optimizer=optimizer, loss='mean_squared_error')
+
+history = model.fit(X_train, y_train, epochs=100, verbose=1)
+print("Loss values:", history.history['loss'])
+
+# 6. Evaluate
+loss = model.evaluate(X_test, y_test)
+print(f"Test loss: {loss:.2f}")
+
+# 7. Save model
+model.save("salary_model.h5")
+print("Model saved as salary_model.h5")
+
+# 8. Load model and predict
+loaded_model = load_model("salary_model.h5")
+
+def predict_salary(years_of_experience):
+    years_scaled = scaler.transform(np.array([[years_of_experience]]))
+    prediction = loaded_model.predict(years_scaled)
+    return prediction[0][0]
+
+# 9. Interactive prediction
+while True:
+    try:
+        user_input = input("Enter years of experience (or 'exit' to quit): ")
+        if user_input.lower() == 'exit':
+            break
+        years = float(user_input)
+        salary = predict_salary(years)
+        print(f"Predicted salary for {years} years experience: ${salary:.2f}")
+    except Exception as e:
+        print("Invalid input. Please enter a number or 'exit'.")
+
+# 10. Plot training loss
+plt.figure(figsize=(10, 5))
+plt.plot(history.history['loss'], label='Training Loss', color='blue')
+plt.title('Model Training Loss Over Epochs')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# 11. Plot predicted vs actual salaries
+y_pred = model.predict(X_test)
+X_test_unscaled = scaler.inverse_transform(X_test)
+
+plt.figure(figsize=(10, 5))
+plt.scatter(X_test_unscaled, y_test, label='Actual Salary', color='green', marker='o')
+plt.scatter(X_test_unscaled, y_pred, label='Predicted Salary', color='red', marker='x')
+plt.plot(X_test_unscaled, y_pred, color='blue', linewidth=2, label='Regression Line')
+plt.title('Actual vs Predicted Salaries')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
