@@ -1,0 +1,84 @@
+{
+  "topic": "Patient medical report for Kristina Petrović, including medical history, current medication, and recent visit summary.",
+  "detected_infopatient_name": "Kristina Petrović",
+  "detected_infodate_of_birth": "12.03.1987",
+  "detected_infoaddress": "Bulevar Oslobođenja 45, Novi Sad",
+  "detected_infophone": "+381 64 123 4567",
+  "detected_infoemail": "kristina.petrovic@example.com",
+  "detected_infonational_id": "1203987450032",
+  "detected_infoinsurance_number": "987654321",
+  "detected_infomedical_history": {
+    "condition": "mild hypertension",
+    "diagnosis_year": 2021,
+    "symptoms": {
+      "[0]": "occasional headaches",
+      "[1]": "elevated blood pressure during stress"
+    },
+    "allergies": "none",
+    "lifestyle": {
+      "smoking": "non-smoker",
+      "alcohol": "occasional"
+    },
+    "family_history": {
+      "mother": "hypertension",
+      "father": "type 2 diabetes"
+    }
+  },
+  "detected_infocurrent_medication": {
+    "[0]": "Amlodipine 5mg once daily",
+    "[1]": "occasional use of paracetamol for headaches"
+  },
+  "detected_inforecent_visit": {
+    "date": "28.10.2025",
+    "blood_pressure": "142/88 mmHg",
+    "physician": "Dr. Marko Ilić",
+    "clinic": "MediCare Plus, Novi Sad",
+    "next_appointment": "15.12.2025"
+  },
+  "PHI_PIIaddress": "*** Missing field ***",
+  "PHI_PIIcurrent_medication": {
+    "[0]": {
+      "dosage": "*** Missing field ***",
+      "medication": "*** Missing field ***"
+    },
+    "[1]": {
+      "medication": "*** Missing field ***",
+      "usage": "*** Missing field ***"
+    }
+  },
+  "PHI_PIIdate_of_birth": "*** Missing field ***",
+  "PHI_PIIemail": "*** Missing field ***",
+  "PHI_PIIinsurance_number": "*** Missing field ***",
+  "PHI_PIImedical_history": {
+    "age": "*** Missing field ***",
+    "conditions": {
+      "[0]": {
+        "condition": "*** Missing field ***",
+        "diagnosed_year": "*** Missing field ***"
+      }
+    },
+    "family_history": {
+      "father": "*** Missing field ***",
+      "mother": "*** Missing field ***"
+    },
+    "gender": "*** Missing field ***",
+    "lifestyle": {
+      "alcohol_consumption": "*** Missing field ***",
+      "smoking": "*** Missing field ***"
+    },
+    "symptoms": {
+      "[0]": "*** Missing field ***",
+      "[1]": "*** Missing field ***"
+    }
+  },
+  "PHI_PIInational_id": "*** Missing field ***",
+  "PHI_PIIpatient_name": "*** Missing field ***",
+  "PHI_PIIphone": "*** Missing field ***",
+  "PHI_PIIrecent_visit": {
+    "blood_pressure": "*** Missing field ***",
+    "clinic": "*** Missing field ***",
+    "date": "*** Missing field ***",
+    "next_appointment": "*** Missing field ***",
+    "physician": "*** Missing field ***"
+  }
+}

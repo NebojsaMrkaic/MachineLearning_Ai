@@ -1,0 +1,5 @@
+{
+  "model": "gpt-4o-mini",
+  "system": "You are a helpful senior assistant that extracts PHI/PII and identifies the topic of the document.",
+  "user": "Analyze the following medical document. Return a JSON with the topic and all detected PHI/PII entities."
+}

@@ -1,0 +1,38 @@
+✅ Non degraded file: output_v1.json
+⚠️ Degradation detected within file: output_v2.json
+📊 Similarity: 0.64
+
+📝 Grammar differences:
+No grammar issues.
+
+📉 Missing fields:
+- PHI_PIIaddress
+- PHI_PIIcurrent_medication.[0].dosage
+- PHI_PIIcurrent_medication.[0].medication
+- PHI_PIIcurrent_medication.[1].medication
+- PHI_PIIcurrent_medication.[1].usage
+- PHI_PIIdate_of_birth
+- PHI_PIIemail
+- PHI_PIIinsurance_number
+- PHI_PIImedical_history.age
+- PHI_PIImedical_history.conditions.[0].condition
+- PHI_PIImedical_history.conditions.[0].diagnosed_year
+- PHI_PIImedical_history.family_history.father
+- PHI_PIImedical_history.family_history.mother
+- PHI_PIImedical_history.gender
+- PHI_PIImedical_history.lifestyle.alcohol_consumption
+- PHI_PIImedical_history.lifestyle.smoking
+- PHI_PIImedical_history.symptoms.[0]
+- PHI_PIImedical_history.symptoms.[1]
+- PHI_PIInational_id
+- PHI_PIIpatient_name
+- PHI_PIIphone
+- PHI_PIIrecent_visit.blood_pressure
+- PHI_PIIrecent_visit.clinic
+- PHI_PIIrecent_visit.date
+- PHI_PIIrecent_visit.next_appointment
+- PHI_PIIrecent_visit.physician
+
+📌 Conclusion:
+File 'output_v1.json' has been marked as better due to more information, better structure, and grammar.
+File 'output_v2.json' shows degradation compared to the other file.

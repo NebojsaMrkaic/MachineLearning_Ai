@@ -1,0 +1,40 @@
+{
+  "topic": "Patient medical report for Kristina Petrović, including medical history, current medication, and recent visit summary.",
+  "detected_info": {
+    "patient_name": "Kristina Petrović",
+    "date_of_birth": "12.03.1987",
+    "address": "Bulevar Oslobođenja 45, Novi Sad",
+    "phone": "+381 64 123 4567",
+    "email": "kristina.petrovic@example.com",
+    "national_id": "1203987450032",
+    "insurance_number": "987654321",
+    "medical_history": {
+      "condition": "mild hypertension",
+      "diagnosis_year": 2021,
+      "symptoms": [
+        "occasional headaches",
+        "elevated blood pressure during stress"
+      ],
+      "allergies": "none",
+      "lifestyle": {
+        "smoking": "non-smoker",
+        "alcohol": "occasional"
+      },
+      "family_history": {
+        "mother": "hypertension",
+        "father": "type 2 diabetes"
+      }
+    },
+    "current_medication": [
+      "Amlodipine 5mg once daily",
+      "occasional use of paracetamol for headaches"
+    ],
+    "recent_visit": {
+      "date": "28.10.2025",
+      "blood_pressure": "142/88 mmHg",
+      "physician": "Dr. Marko Ilić",
+      "clinic": "MediCare Plus, Novi Sad",
+      "next_appointment": "15.12.2025"
+    }
+  }
+}

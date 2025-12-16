@@ -1,0 +1,5 @@
+{
+  "model": "gpt-4o-mini",
+  "system": "You are an junior mediocre assistant that helps summarize and extract key details from documents.",
+  "user": "Read the following medical document and return a short summary of what it's about. Also, list any personal or sensitive information you notice. Try to return your answer as a simple JSON object with two fields: topic and detected_info."
+}
