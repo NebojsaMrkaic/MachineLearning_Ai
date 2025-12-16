@@ -1,0 +1,5 @@
+{"policy_number": "12345", "driver_age": 45, "plate_number": "", "validation_errors": {"plate_number": ["notEmpty"]}}
+{"policy_number": "67890", "plate_number": "ABC-123", "validation_errors": {"driver_age": ["notNull", "isInt", "range:18:99"]}}
+{"policy_number": "88888", "driver_age": 40, "plate_number": "", "validation_errors": {"plate_number": ["notEmpty"]}}
+{"policy_number": "99999", "driver_age": null, "plate_number": "HHH-999", "validation_errors": {"driver_age": ["notNull", "isInt", "range:18:99"]}}
+{"policy_number": "30303", "driver_age": 17, "plate_number": "KKK-303", "validation_errors": {"driver_age": ["range:18:99"]}}

@@ -1,0 +1,10 @@
+{"policy_number": "54321", "driver_age": 30, "plate_number": "XYZ-789", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "11111", "driver_age": 20, "plate_number": "AAA-111", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "22222", "driver_age": 99, "plate_number": "BBB-222", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "44444", "driver_age": 22, "plate_number": "DDD-444", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "55555", "driver_age": 65, "plate_number": "EEE-555", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "66666", "driver_age": 18, "plate_number": "FFF-666", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "77777", "driver_age": 99, "plate_number": "GGG-777", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "10101", "driver_age": 27, "plate_number": "III-101", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "20202", "driver_age": 55, "plate_number": "JJJ-202", "ingestion_dt": "2025-11-28 14:20:58"}
+{"policy_number": "40404", "driver_age": 33, "plate_number": "LLL-404", "ingestion_dt": "2025-11-28 14:20:58"}
